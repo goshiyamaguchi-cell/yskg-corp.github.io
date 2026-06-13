@@ -26,7 +26,7 @@
     --max:1120px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:hidden}
   body{
     font-family:"Noto Sans JP",sans-serif;
     color:var(--ink);
@@ -66,7 +66,7 @@
   .burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
 
   /* ---------- Hero ---------- */
-  .hero{padding:230px 0 110px;position:relative}
+  .hero{padding:230px 28px 110px;position:relative}
   .hero .tag{font-family:"Manrope";font-size:13px;font-weight:700;letter-spacing:.22em;color:var(--green);text-transform:uppercase;margin-bottom:26px}
   .hero h1{font-size:clamp(40px,7vw,82px);line-height:1.05;font-weight:400;letter-spacing:-.01em;color:var(--ink)}
   .hero h1 .it{font-family:"Manrope";font-style:italic;font-weight:800;color:var(--green)}
@@ -139,6 +139,13 @@
   .career-flow span{background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:6px 15px;font-size:13px;font-weight:500;color:var(--ink)}
   .career-flow .ar{color:var(--green);font-weight:700}
   .about-body p{font-size:15px;color:var(--ink-soft);font-weight:300;margin-bottom:16px}
+  .career-tl{margin:6px 0 28px;border-left:2px solid var(--line);padding-left:22px}
+  .career-tl .item{position:relative;padding:0 0 18px}
+  .career-tl .item:last-child{padding-bottom:0}
+  .career-tl .item::before{content:"";position:absolute;left:-29px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--green);border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+  .career-tl .yr{font-family:"Manrope";font-size:13px;font-weight:700;color:var(--green);letter-spacing:.02em}
+  .career-tl .body{font-size:14px;color:var(--ink);font-weight:400;line-height:1.7;margin-top:2px}
+  .career-tl .body small{display:block;color:var(--ink-soft);font-size:13px;font-weight:300;margin-top:1px}
   .info-table{width:100%;border-collapse:collapse;margin-top:30px}
   .info-table th,.info-table td{text-align:left;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}
   .info-table th{width:130px;color:var(--ink);font-weight:700}
@@ -184,15 +191,15 @@
   /* ---------- Responsive ---------- */
   @media(max-width:860px){
     section{padding:84px 0}
-    .menu{position:fixed;inset:0 0 0 auto;width:75%;max-width:320px;background:#fff;flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:0 36px;transform:translateX(100%);transition:transform .35s;box-shadow:-20px 0 60px rgba(0,0,0,.08)}
-    .menu.open{transform:none}
+    .menu{position:fixed;top:0;bottom:0;right:0;width:75%;max-width:320px;background:#fff;flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:0 36px;transform:translateX(101%);visibility:hidden;transition:transform .35s,visibility .35s;box-shadow:-20px 0 60px rgba(0,0,0,.08)}
+    .menu.open{transform:none;visibility:visible}
     .menu a{font-size:18px}
     .burger{display:flex;z-index:120}
     .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .burger.open span:nth-child(2){opacity:0}
     .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .hero{padding:170px 0 70px}
-    .hero-deco{width:240px;height:240px;top:120px;right:-60px;opacity:.35}
+    .hero{padding:170px 28px 70px}
+    .hero-deco{width:220px;height:220px;top:110px;right:0;opacity:.3}
     .mission-grid{grid-template-columns:1fr;gap:40px}
     .biz-grid{grid-template-columns:1fr;gap:18px}
     .value-grid{grid-template-columns:1fr;gap:24px}
@@ -362,17 +369,20 @@
       <div class="about-body reveal">
         <h3>山口 剛志</h3>
         <p class="role">株式会社YSKG 代表取締役</p>
-        <div class="career-flow">
-          <span>営業</span><span class="ar">→</span>
-          <span>人事コンサルタント</span><span class="ar">→</span>
-          <span>管理部門責任者</span><span class="ar">→</span>
-          <span>事業責任者</span><span class="ar">→</span>
-          <span>執行役員</span><span class="ar">→</span>
-          <span>取締役（経営者）</span><span class="ar">→</span>
-          <span>経営コンサルタント</span>
+        <p>横浜市立大学卒業後、新卒で株式会社リクルートマネジメントソリューションズに入社し、人事コンサルタントとしてキャリアをスタート。以降、ゲーム・エンターテインメント・IT領域の事業会社で総務・人事部長、執行役員、取締役を歴任し、事業戦略の立案から組織・人事の設計、海外アライアンスまで幅広く担ってきました。</p>
+        <p>2019年に株式会社YSKGを設立。独立後は、複数の企業で顧問・経営企画部長・CHRO・コーポレート部長などの要職を兼任しながら、外部の客観的な視点と内部人員のような動き方の両面で、各社の経営・組織課題の解決を支援しています。</p>
+        <div class="career-tl">
+          <div class="item"><div class="yr">1998年4月</div><div class="body">株式会社リクルートマネジメントソリューションズ 入社<small>人事コンサルタント</small></div></div>
+          <div class="item"><div class="yr">2003年11月</div><div class="body">株式会社GDH 総務・人事部長</div></div>
+          <div class="item"><div class="yr">2006年3月</div><div class="body">株式会社ゴンゾロッソ 執行役員 情報管理室長<small>GDHからグループ内子会社へ転籍／ゲーム運営部長・海外アライアンス部長</small></div></div>
+          <div class="item"><div class="yr">2010年2月</div><div class="body">NHN Japan株式会社 執行役員 ゲームエンタープライズ事業グループ長<small>現 LINE株式会社／NHN PlayArt株式会社</small></div></div>
+          <div class="item"><div class="yr">2014年1月</div><div class="body">株式会社モンスター・ラボ 取締役 デジタルパートナー事業部長</div></div>
+          <div class="item"><div class="yr">2019年1月</div><div class="body">株式会社YSKG 代表取締役<small>現在に至る</small></div></div>
+          <div class="item"><div class="yr">2019年8月</div><div class="body">株式会社ニジボックス 顧問就任<small>〜2023年6月、2024年6月〜現在に至る</small></div></div>
+          <div class="item"><div class="yr">2023年10月</div><div class="body">株式会社エッジ・インターナショナル 経営企画部長就任<small>〜2024年12月</small></div></div>
+          <div class="item"><div class="yr">2024年3月</div><div class="body">株式会社Will Smart CHRO就任<small>〜2025年8月</small></div></div>
+          <div class="item"><div class="yr">2025年6月</div><div class="body">ちょっと株式会社 コーポレート部長就任<small>現在に至る</small></div></div>
         </div>
-        <p>横浜市立大学卒業。gloops、NHN Japan、モンスター・ラボの3社で取締役・執行役員を歴任し、事業戦略の立案から組織設計までを担ってきました。スマホアプリ・システム開発・ゲーム等のオンラインサービス領域を長く経験し、プロジェクト推進やサービス運営のノウハウを蓄積しています。</p>
-        <p>リクルートグループのニジボックスでは、社長直下の特命担当として経営企画管理および組織人事戦略の強化に従事。事業経験と管理部門の経験をバランスよく積んできたことで、攻めも守りも両面から企業を支援できることが特徴です。2019年1月に株式会社YSKGを設立し、外部の客観的な視点と内部人員のような動き方の両面で、企業の課題解決を支援しています。</p>
         <table class="info-table">
           <tr><th>社名</th><td>株式会社YSKG</td></tr>
           <tr><th>設立</th><td>2019年1月</td></tr>
@@ -416,6 +426,19 @@
     <div class="shead reveal"><span class="mark"></span><h2>Partners</h2><span class="jp">取引先</span></div>
     <p class="ssub reveal">多様な業界のパートナー企業とともに、企業の成長を支援しています。</p>
     <div class="partner-strip reveal">
+      <span>ちょっと株式会社</span>
+      <span>アネス株式会社</span>
+      <span>株式会社静岡情報処理センター</span>
+      <span>株式会社ギークピクチュアズ</span>
+      <span>株式会社エッジ・インターナショナル</span>
+      <span>株式会社ソラスト</span>
+      <span>株式会社Will Smart</span>
+      <span>株式会社アームズコーポレーション</span>
+      <span>株式会社クリエイティブアローズ</span>
+      <span>株式会社Exkey</span>
+      <span>泰樹株式会社</span>
+      <span>株式会社TOBI</span>
+      <span>スタートアップブレイン株式会社</span>
       <span>株式会社ニジボックス</span>
       <span>富士ソフト株式会社</span>
       <span>株式会社コーナー</span>
