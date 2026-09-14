@@ -42,6 +42,11 @@
     "@id": "https://yskg-corp.com/#organization"
    },
    "url": "https://yskg-corp.com/#about",
+   "sameAs": [
+    "https://www.linkedin.com/in/goshiyamaguchi/",
+    "https://shareboss.net/p/boss/goshi-yamaguchi/",
+    "https://circu.co.jp/pro-sharing/cases/wiss1-2/"
+   ],
    "description": "リクルートマネジメントソリューションズでの人事コンサルティングを経て、事業会社の人事部長・執行役員・取締役・CHRO・経営企画部長を歴任。2019年に株式会社YSKGを設立し、経営支援・組織人事・ビジネスコーチングの3領域で成長企業に伴走。"
   },
   "publisher": {
@@ -223,6 +228,35 @@ footer{border-top:1px solid var(--line);padding:40px 0}
   .cta{padding:30px 24px}
   .body h2{margin-top:44px}
 }
+/* cases */
+.cases .note{font-size:12px;color:#8a8a86;margin:-14px 0 28px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:56px}
+.jump a{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--ink-soft)}
+.jump a b{font-family:"Manrope";color:var(--green);margin-right:8px}
+.jump a:hover{border-color:var(--green);color:var(--green)}
+.case{border-top:1px solid var(--line);padding:56px 0 48px}
+.case-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.case-no{font-family:"Manrope";font-size:13px;font-weight:800;color:var(--green);letter-spacing:.1em}
+.case-ind{font-size:14px;font-weight:700}
+.case-area{font-size:12px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:3px 12px}
+.case h2{font-size:clamp(20px,2.8vw,28px);font-weight:700;line-height:1.5;margin-bottom:14px;max-width:820px}
+.case-sum{font-size:15px;font-weight:300;color:var(--ink-soft);max-width:760px;margin-bottom:30px}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.case-grid section{background:var(--bg-soft);border-radius:14px;padding:24px 26px}
+.case-grid h3{font-size:13px;font-weight:700;color:var(--green);letter-spacing:.06em;margin-bottom:10px}
+.case-grid p,.case-grid li{font-size:14px;font-weight:300;line-height:1.9}
+.case-grid ul{list-style:none}
+.case-grid li{position:relative;padding-left:16px;margin-bottom:6px}
+.case-grid li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;border-radius:50%;background:var(--green)}
+.case-rel{margin-top:24px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.case-rel>span{font-size:12px;font-weight:700;color:var(--ink-soft);white-space:nowrap}
+.case-rel ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px}
+.case-rel a{font-size:13px;font-weight:500;border-bottom:1px solid var(--green)}
+.caselink{display:block;border:1px solid var(--green);border-radius:14px;padding:18px 22px;margin-bottom:44px;background:#fff}
+.caselink:hover{background:var(--bg-soft)}
+.cl-k{display:block;font-size:11px;font-weight:700;color:var(--green);letter-spacing:.08em;margin-bottom:6px}
+.cl-t{font-size:15px;font-weight:700;line-height:1.6}
+@media(max-width:860px){.case-grid{grid-template-columns:1fr}.case{padding:40px 0 36px}}
 
 </style>
 </head>
@@ -233,6 +267,7 @@ footer{border-top:1px solid var(--line);padding:40px 0}
     <nav class="menu">
       <a href="/#mission">Philosophy</a>
       <a href="/#business">Service</a>
+      <a href="/cases/">Cases</a>
       <a href="/insights/" class="on">Insights</a>
       <a href="/#about">About</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" class="cta" target="_blank" rel="noopener">Contact</a>
@@ -344,6 +379,7 @@ footer{border-top:1px solid var(--line);padding:40px 0}
         <a href="/#about">プロフィールを見る</a>
       </div>
     </section>
+    <a class="caselink" href="/cases/#it-reorg"><span class="cl-k">関連する支援事例</span><span class="cl-t">CASE 01｜IT企業<br>組織再編後に「役割・KPI・会議体・評価」が追いついていなかった会社</span></a>
     <section class="related"><h2>関連記事</h2><ul><li><a href="/insights/mid-term-management-plan/"><span class="rcat">経営戦略・中期経営計画</span>中期経営計画の作り方｜作って終わらない「実行される経営計画」の設計方法</a></li><li><a href="/insights/kpi-design/"><span class="rcat">事業推進・KPI・管理会計</span>KPIの作り方｜売上目標を現場の行動まで分解する実践ステップ</a></li><li><a href="/insights/kpi-meeting/"><span class="rcat">事業推進・KPI・管理会計</span>KPI会議が「数字の報告会」になる原因｜成果につながるレビュー会議の進め方</a></li><li><a href="/insights/meeting-execution/"><span class="rcat">会議体・意思決定</span>会議で決まったことが実行されない会社の改善方法｜決定管理の基本</a></li></ul></section>
     <nav class="pn"><a class="prev" href="/insights/mid-term-management-plan/"><small>前の記事</small>中期経営計画の作り方</a><a class="next" href="/insights/kpi-design/"><small>次の記事</small>KPIの作り方</a></nav>
   </div>
@@ -352,7 +388,7 @@ footer{border-top:1px solid var(--line);padding:40px 0}
 <footer>
   <div class="wrap foot">
     <a href="/" class="logo" aria-label="YSKG"><img src="/assets/logo.png" alt="YSKG"></a>
-    <nav class="flinks"><a href="/">トップ</a><a href="/#business">サービス</a><a href="/insights/">YSKG Insights</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" target="_blank" rel="noopener">お問い合わせ</a></nav>
+    <nav class="flinks"><a href="/">トップ</a><a href="/#business">サービス</a><a href="/cases/">支援事例</a><a href="/insights/">YSKG Insights</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" target="_blank" rel="noopener">お問い合わせ</a></nav>
     <span class="cp">Copyright © YSKG Inc. All Rights Reserved.</span>
   </div>
 </footer>
