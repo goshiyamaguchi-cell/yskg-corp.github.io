@@ -252,6 +252,7 @@
   .logo{display:inline-flex;align-items:center}
   .logo img{height:26px;width:auto;display:block}
   .menu{display:flex;gap:34px;align-items:center}
+  @media(max-width:1040px){.menu{gap:22px}.menu a{font-size:13px}}
   .menu a{font-family:"Manrope";font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);transition:color .2s;position:relative}
   .menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--green);transition:width .25s}
   .menu a:hover{color:var(--ink)}
@@ -502,6 +503,7 @@
       <a href="#style">Style</a>
       <a href="/cases/">Cases</a>
       <a href="/insights/">Insights</a>
+      <a href="#tools">Workbook</a>
       <a href="#contact" class="cta">Contact</a>
     </nav>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
