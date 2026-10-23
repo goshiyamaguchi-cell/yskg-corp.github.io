@@ -1,4 +1,4 @@
-#yskgInquiryPanel{max-width:760px;margin:40px auto;text-align:left;padding:32px;border:1px solid #dce4dc;border-radius:18px;background:#fff}
+#yskgInquiryPanel{scroll-margin-top:100px;max-width:760px;margin:40px auto;text-align:left;padding:32px;border:1px solid #dce4dc;border-radius:18px;background:#fff}
 #yskgInquiryPanel[hidden]{display:none!important}
 #yskgInquiryPanel h3{font-size:24px;margin:0 0 12px}
 #yskgInquiry fieldset{border:0;padding:0;margin:24px 0 0;min-width:0}
