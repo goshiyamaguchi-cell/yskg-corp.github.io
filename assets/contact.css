@@ -1,0 +1,15 @@
+#yskgInquiryPanel{max-width:760px;margin:40px auto;text-align:left;padding:32px;border:1px solid #dce4dc;border-radius:18px;background:#fff}
+#yskgInquiryPanel[hidden]{display:none!important}
+#yskgInquiryPanel h3{font-size:24px;margin:0 0 12px}
+#yskgInquiry fieldset{border:0;padding:0;margin:24px 0 0;min-width:0}
+#yskgInquiry label{display:block;font-size:14px;font-weight:600;margin:18px 0 6px}
+#yskgInquiry input:not([type=checkbox]),#yskgInquiry textarea,#yskgInquiry select{display:block;box-sizing:border-box;width:100%;padding:12px;border:1px solid #879487;border-radius:8px;background:white;color:#172617;font:inherit;font-size:16px}
+#yskgInquiry textarea{resize:vertical;min-height:150px}
+#yskgInquiry :focus-visible{outline:3px solid #226b2c;outline-offset:3px}
+#yskgInquiry .yskg-consent{display:flex;gap:12px;align-items:flex-start;font-weight:400;line-height:1.8}
+#yskgInquiry .yskg-consent input{margin-top:7px;flex-shrink:0}
+#yskgInquiry button{border:0;border-radius:30px;padding:15px 28px;background:#226b2c;color:white;font:inherit;font-weight:700;cursor:pointer;margin-top:24px}
+#yskgInquiry fieldset:disabled button{opacity:.65;cursor:default}
+#yskgInquiryStatus{line-height:1.8;margin-top:20px}
+.yskg-form-note{font-size:13px;line-height:1.8;color:#465246}
+@media(max-width:600px){#yskgInquiryPanel{padding:22px 18px}#yskgInquiry button{width:100%}}

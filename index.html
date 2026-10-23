@@ -491,6 +491,7 @@
     .style-grid{grid-template-columns:1fr;gap:30px}
   }
 </style>
+<link rel="stylesheet" href="assets/contact.css">
 </head>
 <body>
 
@@ -527,7 +528,7 @@
   <p class="lead">事業推進と組織人事に強い経営コンサルティング。<br>計画を立てたあと、誰が何を進めるか。人事制度を変えたあと、現場でどう使うか。YSKGは、経営者の皆さんと課題を整理し、具体的に動かすところまで一緒に取り組みます。</p>
   <div class="hero-btns">
     <a href="#business" class="hbtn">支援内容を見る</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" class="hbtn ghost" target="_blank" rel="noopener">相談する</a>
+    <a data-yskg-contact-link href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" class="hbtn ghost" target="_blank" rel="noopener">相談する</a>
   </div>
   <a href="#mission" class="scrollcue en">SCROLL<span class="line"></span></a>
 </section>
@@ -1000,12 +1001,34 @@
     <div class="reveal">
       <div class="contact-en en"><span class="dash"></span>Get in Touch<span class="dash"></span></div>
       <p class="contact-sub">経営や組織のことで、いま困っていることをお聞かせください。<br>何を依頼するかが決まっていなくても構いません。状況を整理し、どこから取り組むかをご一緒に考えます。</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" class="contact-btn" id="contactLink" target="_blank" rel="noopener">
+      <a data-yskg-contact-link href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" class="contact-btn" id="contactLink" target="_blank" rel="noopener">
         お問い合わせフォームへ
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12 H19 M13 6 L19 12 L13 18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
   </div>
+
+<div id="yskgInquiryPanel" hidden>
+<h3>ご相談・お問い合わせ</h3>
+<p class="yskg-form-note">ご相談内容がまだ整理できていなくても、お気軽にお聞かせください。＊は必須項目です。</p>
+<form id="yskgInquiry" method="post" action="#contact">
+<fieldset>
+<label for="yskgName">お名前 ＊</label><input id="yskgName" name="name" autocomplete="name" maxlength="100" required>
+<label for="yskgCompany">会社名・団体名</label><input id="yskgCompany" name="company" autocomplete="organization" maxlength="200">
+<label for="yskgRole">役職</label><input id="yskgRole" name="role" autocomplete="organization-title" maxlength="100">
+<label for="yskgEmail">メールアドレス ＊</label><input id="yskgEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+<label for="yskgPhone">電話番号</label><input id="yskgPhone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+<label for="yskgTopic">お問い合わせ種別</label><select id="yskgTopic" name="topic"><option>経営支援</option><option>組織人事</option><option>経営者・管理職育成</option><option>採用・人材育成</option><option>その他・まだ決まっていない</option></select>
+<label for="yskgMessage">ご相談内容 ＊</label><textarea id="yskgMessage" name="message" maxlength="5000" required></textarea>
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="yskg-form-note">入力いただいた情報は、お問い合わせへの回答・ご相談への対応に利用します。送信内容は受付サービスFormspreeに送信・保存されます。氏名や相談内容はアクセス解析には送信しません。</p>
+<label class="yskg-consent"><input type="checkbox" name="consent" value="agreed" required><span>上記の情報の取り扱いに同意します。＊</span></label>
+<button type="submit">相談内容を送信する</button>
+</fieldset>
+</form>
+<p id="yskgInquiryStatus" role="status" aria-live="polite" tabindex="-1"></p>
+<p class="yskg-form-note">フォームが利用できない場合は、<a href="https://docs.google.com/forms/d/e/1FAIpQLSeyWhPAsAc2aA77muudoQTNtPHgsl8n3TeLs5RF0xTW0i3c-A/viewform" target="_blank" rel="noopener">Googleフォームからご相談ください</a>。</p>
+</div>
 </section>
 
 <footer>
@@ -1028,5 +1051,7 @@
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="assets/contact-config.js"></script>
+<script src="assets/contact.js"></script>
 </body>
 </html>
